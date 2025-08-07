@@ -988,7 +988,7 @@ uint8_t LctrIsoReadTestCounter(uint16_t handle, LlIsoTestCtrs_t *pStats)
 /*************************************************************************************************/
 uint8_t LctrIsoTestEnd(uint16_t handle, LlIsoTestCtrs_t *pStats)
 {
-  uint8_t status;
+  uint8_t status = LL_ERROR_CODE_UNSPECIFIED_ERROR;
   lctrCisCtx_t *pCisCtx;
   lctrBisCtx_t *pBisCtx;
 
