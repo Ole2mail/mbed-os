@@ -1554,7 +1554,7 @@ int8_t lowpan_adaptation_interface_tx_confirm(protocol_interface_info_entry_t *c
 
     //Check first
     fragmenter_tx_entry_t *tx_ptr;
-    bool active_direct_confirm;
+    bool active_direct_confirm = false;
     if (lowpan_active_tx_handle_verify(confirm->msduHandle, interface_ptr->active_broadcast_tx_buf.buf)) {
         active_direct_confirm = true;
         tx_ptr = &interface_ptr->active_broadcast_tx_buf;
